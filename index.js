@@ -29,11 +29,28 @@ async function run() {
             const result = await usersCollection.insertOne(user);
             res.send(result);
         });
+        app.post('/users/admin', async (req, res) => {
+            const { email } = req.body;
+            const isAdmin = false;
+            const result = await usersCollection.findOne({ email });
+            if (result.role === 'admin') {
+                isAdmin = true;
+            }
+            res.send({ isAdmin });
+        })
         app.put('/users', async (req, res) => {
-
+            const userData = req.body;
+            const filter = { email: userData.newAdmin };
+            const updateData = {
+                $set: {
+                    role: 'admin'
+                }
+            };
+            const result = await usersCollection.updateOne(filter, updateData);
+            res.send(result);
         })
     } finally {
-
+        //client.close();
     }
 }
 run().catch(console.dir);
