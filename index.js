@@ -31,12 +31,8 @@ async function run() {
         });
         app.post('/users/admin', async (req, res) => {
             const { email } = req.body;
-            const isAdmin = false;
             const result = await usersCollection.findOne({ email });
-            if (result.role === 'admin') {
-                isAdmin = true;
-            }
-            res.send({ isAdmin });
+            res.send(result);
         })
         app.put('/users', async (req, res) => {
             const userData = req.body;
