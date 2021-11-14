@@ -102,15 +102,16 @@ async function run() {
             const result = await ordersCollection.insertOne(orders);
             res.send(result);
         });
+        //get  orders by email address
+        app.get('/orders/email', async (req, res) => {
+            const email = req.query.email;
+            const result = await ordersCollection.find({ email: email }).toArray();
+            res.send(result);
+        });
+
         //get all the orders
         app.get('/orders', async (req, res) => {
             const result = await ordersCollection.find({}).toArray();
-            res.send(result);
-        });
-        //get  orders by email address
-        app.get('/orders', async (req, res) => {
-            const email = req.query.email;
-            const result = await ordersCollection.find({ email: email }).toArray();
             res.send(result);
         });
 
