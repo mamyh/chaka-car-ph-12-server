@@ -104,7 +104,7 @@ async function run() {
         });
         //get all the orders
         app.get('/orders', async (req, res) => {
-            const result = await reviewCollection.find({}).toArray();
+            const result = await ordersCollection.find({}).toArray();
             res.send(result);
         });
 
