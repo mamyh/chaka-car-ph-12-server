@@ -124,7 +124,7 @@ async function run() {
                     status: 'approved'
                 }
             };
-            const result = await usersCollection.updateOne(filter, updateData);
+            const result = await ordersCollection.updateOne(filter, updateData);
             res.send(result);
         });
     } finally {
