@@ -107,6 +107,12 @@ async function run() {
             const result = await ordersCollection.find({}).toArray();
             res.send(result);
         });
+        //get  orders by email address
+        app.get('/orders', async (req, res) => {
+            const email = req.query.email;
+            const result = await ordersCollection.find({ email: email }).toArray();
+            res.send(result);
+        });
 
         //delete one order
         app.delete('/orders/:id', async (req, res) => {
