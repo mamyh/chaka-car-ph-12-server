@@ -2,19 +2,9 @@
  
  live demo is [demo-link]https://my-car-project-b6659.web.app/
  server side demo [demo-link]https://infinite-plains-05304.herokuapp.com/
- client side code [github-client-code]https://github.com/programming-hero-web-course-4/niche-website-client-side-mamyh
- server side code [github-server-code]https://github.com/programming-hero-web-course-4/niche-website-server-side-mamyh
-
-------------------------------
- #`used technology `
------------------------------
- #`My Car Seller  React application `
+ client side code [github-client-code]https://github.com/mamyh/chaka-car-ph-12-client
+ server side code [github-server-code]https://github.com/mamyh/chaka-car-ph-12-server
  
- live demo is [demo-link]https://my-car-project-b6659.web.app/
- server side demo [demo-link]https://infinite-plains-05304.herokuapp.com/
- client side code [github-client-code]https://github.com/programming-hero-web-course-4/niche-website-client-side-mamyh
- server side code [github-server-code]https://github.com/programming-hero-web-course-4/niche-website-server-side-mamyh
-
 ------------------------------
  #`used technology `
 -----------------------------
